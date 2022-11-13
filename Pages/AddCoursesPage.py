@@ -1,12 +1,12 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from Utils.Locators import LoginPageLocators
+from Utils.Locators import AddCoursesPageLocators
 
 
 class AddCourse:
     def __init__(self, driver,):
         self.driver = driver
-        self.locator = LoginPageLocators
+        self.locator = AddCoursesPageLocators
         self.wait = WebDriverWait(driver, 10)
 
     def click_courses(self):

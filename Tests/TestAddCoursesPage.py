@@ -7,7 +7,7 @@ from Utils.ReadProperties import ReadConfig
 from selenium.webdriver.chrome.options import Options
 
 opt = Options()
-opt.headless = True
+# opt.headless = True
 opt.add_argument('--disable-gpu')
 opt.add_argument('--window-size=1280x1696')
 driver = webdriver.Chrome(executable_path=r"C:\Users\LA\PycharmProjects\itworx education\Driver\chromedriver.exe", chrome_options=opt)
@@ -44,7 +44,3 @@ class AddCourses(unittest.TestCase):
             driver.save_screenshot(".\\Screenshot\\" + "Login.png")
             raise TypeError("test Failed")
 
-    @classmethod
-    def tearDownClass(cls):
-        driver.close()
-        driver.quit()
